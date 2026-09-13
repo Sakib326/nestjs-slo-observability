@@ -43,7 +43,7 @@ npm install @byteforgedev/nestjs-slo-observability
 
 ### Peer Dependencies
 
-Ensure your project has the required peer dependencies installed:
+Supports **NestJS 10.x and 11.x**. Ensure your project has the required peer dependencies installed:
 
 ```bash
 npm install @nestjs/common @nestjs/core reflect-metadata rxjs
