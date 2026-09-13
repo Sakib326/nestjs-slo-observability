@@ -1,7 +1,23 @@
 {
-  "name": "@yourscope/nestjs-observability",
+  "name": "@byteforgedev/nestjs-slo-observability",
   "version": "0.1.0",
   "description": "Metrics, SLO/error-budget, structured logging, and health checks for NestJS.",
+  "author": {
+    "name": "Sakib326",
+    "email": "smsakib2001@gmail.com",
+    "url": "https://github.com/Sakib326"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sakib326/nestjs-slo-observability.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sakib326/nestjs-slo-observability/issues"
+  },
+  "homepage": "https://github.com/Sakib326/nestjs-slo-observability#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {

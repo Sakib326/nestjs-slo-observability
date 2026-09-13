@@ -1,9 +1,9 @@
-# @yourscope/nestjs-observability
+# @byteforgedev/nestjs-slo-observability
 
 > Production-ready observability suite for NestJS: Metrics, Service Level Objectives (SLOs) with rolling error budgets, AsyncLocalStorage correlation IDs, structured JSON logging, and dependency health checks.
 
 [![CI](https://github.com/Sakib326/nestjs-slo-observability/actions/workflows/ci.yml/badge.svg)](https://github.com/Sakib326/nestjs-slo-observability/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/@yourscope/nestjs-observability.svg)](https://www.npmjs.com/package/@yourscope/nestjs-observability)
+[![npm version](https://img.shields.io/npm/v/@byteforgedev/nestjs-slo-observability.svg)](https://www.npmjs.com/package/@byteforgedev/nestjs-slo-observability)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
@@ -38,7 +38,7 @@ Designed from the ground up for high-throughput, low-latency production microser
 ## Installation
 
 ```bash
-npm install @yourscope/nestjs-observability
+npm install @byteforgedev/nestjs-slo-observability
 ```
 
 ### Peer Dependencies
@@ -59,7 +59,7 @@ Import and register `ObservabilityModule.forRoot()` in your root application mod
 
 ```typescript
 import { Module } from '@nestjs/common';
-import { ObservabilityModule } from '@yourscope/nestjs-observability';
+import { ObservabilityModule } from '@byteforgedev/nestjs-slo-observability';
 
 @Module({
   imports: [
@@ -93,7 +93,7 @@ To route all NestJS application logs through the structured JSON logger with cor
 
 ```typescript
 import { NestFactory } from '@nestjs/core';
-import { ObservabilityLoggerService } from '@yourscope/nestjs-observability';
+import { ObservabilityLoggerService } from '@byteforgedev/nestjs-slo-observability';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
@@ -117,7 +117,7 @@ Load options dynamically from your `ConfigService`:
 ```typescript
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { ObservabilityModule } from '@yourscope/nestjs-observability';
+import { ObservabilityModule } from '@byteforgedev/nestjs-slo-observability';
 
 @Module({
   imports: [
@@ -147,7 +147,7 @@ export class AppModule {}
 - **Async Tracking**: Any service in the call chain can inject `CorrelationIdService` to obtain the current request's correlation ID:
   ```typescript
   import { Injectable } from '@nestjs/common';
-  import { CorrelationIdService } from '@yourscope/nestjs-observability';
+  import { CorrelationIdService } from '@byteforgedev/nestjs-slo-observability';
 
   @Injectable()
   export class OrderService {
@@ -179,7 +179,7 @@ Define targets for specific routes or entire paths. The aggregator runs a memory
 Create custom checks by implementing the `HealthCheck` interface:
 
 ```typescript
-import { HealthCheck, HealthCheckResult } from '@yourscope/nestjs-observability';
+import { HealthCheck, HealthCheckResult } from '@byteforgedev/nestjs-slo-observability';
 
 export class DatabaseHealthCheck implements HealthCheck {
   name = 'database';
@@ -250,7 +250,7 @@ ObservabilityModule.forRoot({
 You can also supply any custom class implementing the `MetricsStorage` interface:
 
 ```typescript
-import { MetricsStorage, MetricRecord } from '@yourscope/nestjs-observability';
+import { MetricsStorage, MetricRecord } from '@byteforgedev/nestjs-slo-observability';
 
 export class CustomPrometheusStorage implements MetricsStorage {
   incrementCounter(name: string, labels: Record<string, string>, value?: number): void {}
