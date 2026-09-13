@@ -2,6 +2,7 @@
 
 > Production-ready observability suite for NestJS: Metrics, Service Level Objectives (SLOs) with rolling error budgets, AsyncLocalStorage correlation IDs, structured JSON logging, and dependency health checks.
 
+[![CI](https://github.com/Sakib326/nestjs-slo-observability/actions/workflows/ci.yml/badge.svg)](https://github.com/Sakib326/nestjs-slo-observability/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/@yourscope/nestjs-observability.svg)](https://www.npmjs.com/package/@yourscope/nestjs-observability)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
